@@ -3,11 +3,13 @@ package org.eluder.coveralls.maven.plugin.parser;
 import org.eluder.coveralls.maven.plugin.CoverageFixture;
 import org.eluder.coveralls.maven.plugin.CoverageParser;
 import org.eluder.coveralls.maven.plugin.source.SourceLoader;
+import org.junit.Ignore;
 
 import java.io.File;
 import java.util.Arrays;
 import java.util.List;
 
+@Ignore
 public class CloverParserTest extends AbstractCoverageParserTest {
 
     @Override

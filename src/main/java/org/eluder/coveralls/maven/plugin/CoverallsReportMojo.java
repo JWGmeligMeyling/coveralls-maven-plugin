@@ -171,6 +171,12 @@ public class CoverallsReportMojo extends AbstractMojo {
     protected String pullRequest;
 
     /**
+     * Coveralls parallel flag.
+     */
+    @Parameter(property = "parallel")
+    protected boolean parallel;
+
+    /**
      * Build timestamp format. Must be in format supported by SimpleDateFormat.
      */
     @Parameter(property = "timestampFormat", defaultValue = "${maven.build.timestamp.format}")
@@ -336,6 +342,7 @@ public class CoverallsReportMojo extends AbstractMojo {
             .withServiceJobId(serviceJobId)
             .withServiceBuildNumber(serviceBuildNumber)
             .withServiceBuildUrl(serviceBuildUrl)
+            .withParallel(parallel)
             .withServiceEnvironment(serviceEnvironment)
             .withDryRun(dryRun)
             .withBranch(branch)
